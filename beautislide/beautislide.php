@@ -31,5 +31,16 @@ function beautislide_scripts() {
 
 add_action( 'wp_enqueue_scripts', 'beautislide_scripts' );
 
+ 	/*--------------------------------------------------------------------------------*/
+	// Slider Section
+
+  function beautislide_customizer( $wp_customize ){
+	$wp_customize->add_section(
+		'sec_slider', array(
+			'title'			=> 'Slider Settings',
+			'description'	=> 'Slider Section'
+		)
+	);	
+
 
  ?>

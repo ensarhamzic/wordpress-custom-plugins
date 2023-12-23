@@ -17,3 +17,10 @@
     echo 'Hi there! I\'m just a plugin, not much I can do when called directly.';
     exit;
 }
+
+function woohome_scripts() {
+  $plugin_directory_url = plugin_dir_url( __FILE__ );
+  wp_enqueue_style('woohome-styles', $plugin_directory_url . '/inc/style.css', array(), '', 'all');
+}
+
+add_action( 'wp_enqueue_scripts', 'woohome_scripts' );
